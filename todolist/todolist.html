@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <meta charset="utf-8">
+        
+		<title>Todo List</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<!-- JavaScripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="reset.css"> 
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+
+	</head>
+	<body>
+
+		<header>
+			<input type="text" id="item" placeholder="Enter an activity here..">
+			<button id="add">
+				<i class="fas fa-plus"></i>
+			</button>
+		</header>
+
+		<div class="task">
+			<!-- <h3>Today</h3> -->
+			<!-- Uncompleted tasks -->
+			<div class="left">
+				<h3>To do ...</h3>
+				<ul class="todo" id="todo">
+				
+				</ul>
+			</div>
+
+			<!-- Completed tasks -->
+			<div class="right">
+				<h3>Completed</h3>
+				<ul class="todo" id="completed">
+				
+				</ul>
+			</div>
+		</div>
+		
+		<div id="notifier">
+			<div id="notifier_content">
+				<p>"1 item completed"<span id="undo">undo</span><span id="done">done</span></p>
+			</div>
+		</div>
+
+		<!-- <footer>Designed &amp coded by <span>Chen Wei</span></footer> -->
+	<script src="main.js"></script>
+	</body>
+</html>

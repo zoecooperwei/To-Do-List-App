@@ -1,0 +1,344 @@
+body {
+  /*background: #edf0f1;*/
+  background: url("img/bg.jpg");
+  background-size: cover;
+  /*background: no-repeat;*/
+  padding: 80px 0 0 0;
+}
+
+body, input, button {
+  font-family: 'Gamja Flower', cursive;
+}
+
+.noFill {
+  fill: none;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+
+  position: fixed;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  background: #db4c3f;
+  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  /*border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;*/
+}
+
+header input {
+  width: 100%;
+  height: 50px;
+  float: left;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  text-indent: 18px;
+  padding: 0 60px 0 0;
+  background: rgba(255, 255, 255, 0.2);
+  /*border-radius: 5px 25px 25px 5px;*/
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+header input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input:-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input::-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header button {
+  width: 50px;
+  height: 50px;
+
+  position:absolute;
+  top:15px;
+  right:15px;
+  z-index:2;
+
+  border-radius: 25px;
+  background: #fff;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+header button svg {
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -8px 0 0 -8px;
+}
+
+header button svg .fill {
+  fill: #db4c3f;
+}
+
+.task {
+  margin: auto;
+  width: 1200px;
+  padding: 15px;
+}
+
+.task h3 {
+  margin: 0;
+  padding: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.task ul.todo{
+  padding: 20px;
+  /*position: relative;*/
+}
+
+.task ul li {
+  width: 400px;
+  min-height: 50px;
+  /*float: left;*/
+  font-size: 18px;
+  font-weight: 500;
+  color: #db4c3f;
+  line-height: 22px;
+
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 14px 100px 14px 14px;
+  word-break: break-word;
+}
+
+.task ul.todo li:last-of-type {
+  margin: 0;
+  padding: 14px 100px 0 14px;
+}
+
+.task ul.todo li .buttons {
+  width: 100px;
+  height: 50px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.task ul.todo li .buttons button {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background: none;
+  position: relative;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.task ul.todo li .buttons button:last-of-type:before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background: #f7d6d3;
+
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.task ul.todo li .buttons button svg {
+  width: 22px;
+  height: 22px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -11px 0 0 -11px;
+}
+
+.task ul.todo li .buttons button.complete svg {
+  border-radius: 11px;
+  border: 1.5px solid #db4c3f;
+
+  transition: background 0.2s ease;
+}
+
+.task ul.todo#completed li .buttons button.complete svg {
+  background: #db4c3f;
+  border: 0px;
+}
+
+.task ul.todo:not(#completed) li .buttons button.complete:hover svg {
+  background: #db4c3f;
+}
+
+.task ul.todo:not(#completed) li .buttons button.complete svg .fill{
+  fill: #db4c3f;
+}
+
+.task ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
+  fill: #fff;
+}
+
+.task ul.todo#completed li .buttons button.complete svg .fill {
+  fill: #fff;
+}
+
+.task ul.todo li .buttons button svg .fill {
+  transition: fill 0.2s ease;
+}
+
+.task ul.todo li .buttons button.remove svg .fill {
+  fill: #c0cecb;
+}
+
+.task ul.todo li .buttons button.remove:hover svg .fill {
+  fill: #e85656;
+}
+
+.task ul.todo li .buttons button.complete svg .fill {
+  fill: #25b99a;
+}
+
+.task .left {
+  position: relative;
+  padding: 60px 40px 0 40px;
+  width: 50%;
+  float: left;
+}
+
+.task .right {
+  position: relative;
+  padding: 60px 40px 0 40px;
+  width: 50%;
+  float: right;
+}
+
+/*.task ul.todo#completed:before {
+  content: '';
+  width: 150px;
+  height: 1px;
+  background: #d8e5e0;
+
+  position: absolute;
+  top: 30px;
+  left: 50%;
+
+  margin: 0 0 0 -75px;
+}*/
+
+.task ul.todo#todo:empty:after {
+  content: 'You have nothing to-do!';
+  margin: 15px 0 0 0;
+}
+
+.task ul.todo#completed:empty:after {
+  content: 'You have yet to complete any tasks.';
+}
+
+.task ul.todo#todo:after,
+.task ul.todo#completed:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  left: 0;
+  color: #db4c3f;
+  text-align: center;
+  clear: both;
+  margin: 0 auto;
+  border: 0;
+  font-size: 16px;
+  padding: 0;
+}
+
+i {
+  font-size: 25px;
+  color: #db4c3f;
+}
+
+#notifier{
+  opacity: 1.0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 300px;
+  min-height: 22px;
+  text-align: center;
+  background-color: #555;
+  bottom: 24px;
+  border-radius: 3px;
+  z-index: 20000;
+  transition: opacity 0.25s ease-in;
+
+  display: none;
+}
+
+#notifier_content{
+  white-space: nowrap;
+  padding: 12px 20px;
+  display: block;
+  margin-top: 1px;
+  color: #fff;
+}
+
+#notifier span{
+  color: #ea9388;
+  margin: 0 0 0 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#notifier span:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 815px) {
+  #notifier {
+    margin-left: 252px;
+  }
+}
