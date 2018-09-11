@@ -6,4 +6,6 @@ Single page web app for to-do list management.
 - Activities add, delete, edit.
 ---
 
+To-do list interface
 
+![To-do-list](https://github.com/zoecooperwei/My-Blog-Design/blob/master/img/Todo.jpg)
